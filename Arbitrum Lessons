@@ -1,0 +1,79 @@
+!-- Created by Tobs gwnft --> 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #333;
+        }
+        .quote {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #555;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body> 
+ 
+ 
+    <div class="container">
+        <h1>Educational web3 Dapp</h1>
+        <div id="quote" class="quote">Get to know more on ABITRUM in one Tap!</div>
+        <button id="new-quote">Tap to learn</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "Abitrum is the leading layer 2 technology that empowers you to explore and build in the largest layer 1 ecosystem .",
+            "Abitrum was created by Ed felten,professor of computer science and public affairs at priceton,co-founded offchain labs,the company behind arbitrum in 2018.",
+            "The $ARB token is an ERC-20 governance token that allows it holder to participate in the arbitrum DAO's on-chain governance protocol",
+            "Abitrum has two separate networks: Arbitrum One and Arbitrum Nova. This article will focus on adding Arbitrum One to MetaMask.",
+            "ARB is the utility token of Arbitrum, an Ethereum layer-2 network. ARB functions as the governance token of the Arbitrum DAO, as holders may create and vote on governance proposals."
+        ];
+
+        document.getElementById('new-quote').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
+            document.getElementById('quote').textContent = quote;
+        });
+    </script>
+</body>
+</html>
